@@ -4,8 +4,6 @@ using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives;
 
 public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
 {
-    protected int maxHealth = 10;
-    protected int currentHealth;
     private float speed;
     private Transform player;
     public AudioClip raptorSound;
@@ -15,10 +13,14 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
     public Color hitColor = new Color(1f, 0.3f, 0.3f);
     private bool IsWithinStrikingRange = false;
 
+    [field: SerializeField] public float MaxHealth { get; set; } = 100f;
+    public float CurrentHealth { get; set; }
+    bool ITriggerCheckable.IsWithinStrikingRange { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = MaxHealth;
         speed = 3f;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         audioSource.PlayOneShot(raptorSound);
@@ -43,11 +45,11 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
 
     public void Damage(int damage)
     {
-        currentHealth -= damage;
+        CurrentHealth -= damage;
 
         StartCoroutine(FlashRed());
 
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Die();
         }
@@ -72,5 +74,10 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
         spriteRenderer.color = hitColor;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
+    }
+
+    public void Damage(float damageAmount)
+    {
+        throw new System.NotImplementedException();
     }
 }

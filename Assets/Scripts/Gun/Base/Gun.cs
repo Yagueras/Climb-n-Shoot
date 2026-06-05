@@ -39,6 +39,9 @@ public class Gun : MonoBehaviour
     public GunOverheatedState OverheatedState { get; set; }
 
     #endregion
+    public AudioClip shootingSound;
+    public AudioClip OverheatSound;
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -74,6 +77,7 @@ public class Gun : MonoBehaviour
 
             if (_currentCooldownTimer >= attackCooldownDuration)
             {
+                audioSource.PlayOneShot(shootingSound);
                 RaycastHit hit;
 
                 if (Physics.Raycast(transform.position, Vector3.forward, out hit))
@@ -96,6 +100,7 @@ public class Gun : MonoBehaviour
         if (currentGunTemperature >= maxHeatCapacity)
         {
             overheated = true;
+            audioSource.PlayOneShot(OverheatSound);
         }
     }
 
