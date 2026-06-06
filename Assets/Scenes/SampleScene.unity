@@ -127,6 +127,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3696438267471375278, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267471375278, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267471375279, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267471375279, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267471375279, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267471375279, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3696438267687344176, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -139,6 +163,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3696438267687344176, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267687344176, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696438267687344176, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3696438268324968505, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -149,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4388935194909489160, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4388935194909489160, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -190,6 +226,14 @@ PrefabInstance:
     - target: {fileID: 4388935194909489160, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147994417299288101, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0287
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147994417299288101, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1168
       objectReference: {fileID: 0}
     - target: {fileID: 5383467431713647161, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -370,6 +414,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &761671267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3696438267471375279, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+  m_PrefabInstance: {fileID: 197414984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1061819076 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7742903581253479929, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
@@ -388,11 +443,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunManager
   maxHeatCapacity: 20
-  timeBetweenAttacks: 0.2
   bulletHeat: 2
   overheatCooldownDuration: 5
-  coolDownStartTimer: 0.5
+  gunCoolDownStartTimer: 1
   coolDownSpeed: 3
+  attackCooldownDuration: 0.2
+  gunHeatSlider: {fileID: 761671267}
+  confetti: {fileID: 1591634938}
 --- !u!1001 &1117623853
 PrefabInstance:
   m_ObjectHideFlags: 0
