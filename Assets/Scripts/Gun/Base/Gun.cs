@@ -31,6 +31,10 @@ public class Gun : MonoBehaviour
 
     [SerializeField] public ParticleSystem confetti;
 
+    public AudioClip gunshotSound;
+    public AudioClip sizzlingSound;
+    public AudioSource audioSource;
+
     private void Awake()
     {
         _currentCooldownTimer = attackCooldownDuration;
@@ -48,7 +52,7 @@ public class Gun : MonoBehaviour
     {
         if (overheated)
             return;
-
+        audioSource.PlayOneShot(gunshotSound);
         if (!_attackCoolingDown)
         {
             RaycastHit hit;
@@ -80,6 +84,7 @@ public class Gun : MonoBehaviour
         {
             overheated = true;
             Debug.Log("Weapon Overheated!");
+            audioSource.PlayOneShot(sizzlingSound);
         }
     }
 
