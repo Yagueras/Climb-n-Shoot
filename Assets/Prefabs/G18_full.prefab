@@ -67,9 +67,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce1551f27c31b2d48b767cbc822c9bbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7650497687676882397}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce1551f27c31b2d48b767cbc822c9bbd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -4772424296023045008}
   m_SourcePrefab: {fileID: 100100000, guid: ce1551f27c31b2d48b767cbc822c9bbd, type: 3}
 --- !u!1 &4211479849749575023 stripped
 GameObject:
@@ -173,26 +170,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-4772424296023045008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4211479849749575023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf9b7ad8bdf82b43b794268ef0732c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gun
-  maxHeatCapacity: 20
-  bulletHeat: 2
-  overheatCooldownDuration: 5
-  gunCoolDownStartTimer: 1
-  coolDownSpeed: 3
-  attackCooldownDuration: 0.2
-  gunHeatSlider: {fileID: 0}
-  confetti: {fileID: 0}
-  gunshotSound: {fileID: 8300000, guid: f46d198d7e250594b87dd67543ef3c2d, type: 3}
-  sizzlingSound: {fileID: 8300000, guid: 247b2db4b17e99c418f986253c34bcd2, type: 3}
-  audioSource: {fileID: -7650497687676882397}

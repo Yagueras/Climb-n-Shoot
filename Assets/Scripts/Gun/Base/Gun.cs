@@ -52,7 +52,7 @@ public class Gun : MonoBehaviour
     {
         if (overheated)
             return;
-        audioSource.PlayOneShot(gunshotSound);
+        
         if (!_attackCoolingDown)
         {
             RaycastHit hit;
@@ -63,6 +63,7 @@ public class Gun : MonoBehaviour
 
             ApplyHeat(bulletHeat);
             confetti.Play();
+            audioSource.PlayOneShot(gunshotSound);
 
             // Reset attack cooldown
             _currentCooldownTimer = 0f;
