@@ -130,11 +130,11 @@ GameObject:
   - component: {fileID: 1043871}
   m_Layer: 0
   m_Name: Spawn (8)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1043871
 Transform:
   m_ObjectHideFlags: 0
@@ -7274,11 +7274,11 @@ GameObject:
   - component: {fileID: 846920920}
   m_Layer: 0
   m_Name: Spawn (3)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &846920920
 Transform:
   m_ObjectHideFlags: 0
@@ -7306,11 +7306,11 @@ GameObject:
   - component: {fileID: 852445860}
   m_Layer: 0
   m_Name: Spawn (6)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &852445860
 Transform:
   m_ObjectHideFlags: 0
@@ -8202,11 +8202,11 @@ GameObject:
   - component: {fileID: 919691422}
   m_Layer: 0
   m_Name: Spawn (5)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &919691422
 Transform:
   m_ObjectHideFlags: 0
@@ -9612,11 +9612,11 @@ GameObject:
   - component: {fileID: 1164455490}
   m_Layer: 0
   m_Name: Spawn (10)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1164455490
 Transform:
   m_ObjectHideFlags: 0
@@ -10555,11 +10555,11 @@ GameObject:
   - component: {fileID: 1203793978}
   m_Layer: 0
   m_Name: Spawn (1)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1203793978
 Transform:
   m_ObjectHideFlags: 0
@@ -10879,11 +10879,11 @@ GameObject:
   - component: {fileID: 1229785285}
   m_Layer: 0
   m_Name: Spawn (4)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1229785285
 Transform:
   m_ObjectHideFlags: 0
@@ -12628,11 +12628,11 @@ GameObject:
   - component: {fileID: 1485072652}
   m_Layer: 0
   m_Name: Spawn (7)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1485072652
 Transform:
   m_ObjectHideFlags: 0
@@ -16559,11 +16559,11 @@ GameObject:
   - component: {fileID: 2049450602}
   m_Layer: 0
   m_Name: Spawn (2)
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2049450602
 Transform:
   m_ObjectHideFlags: 0
@@ -17054,11 +17054,11 @@ GameObject:
   - component: {fileID: 2080911329}
   m_Layer: 0
   m_Name: Spawn
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2080911329
 Transform:
   m_ObjectHideFlags: 0
