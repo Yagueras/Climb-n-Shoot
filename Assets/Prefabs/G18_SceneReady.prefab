@@ -320,6 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5383467431713647161}
   - component: {fileID: 9123948720887460938}
+  - component: {fileID: 4652441993615078013}
   - component: {fileID: 4388935194909489160}
   m_Layer: 0
   m_Name: G18_SceneReady
@@ -378,6 +379,29 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4652441993615078013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742903581253479929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf9b7ad8bdf82b43b794268ef0732c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gun
+  maxHeatCapacity: 20
+  bulletHeat: 2
+  overheatCooldownDuration: 5
+  gunCoolDownStartTimer: 1
+  coolDownSpeed: 3
+  attackCooldownDuration: 0.2
+  gunHeatSlider: {fileID: 3696438267471375279}
+  confetti: {fileID: 5147994417299288102}
+  gunshotSound: {fileID: 8300000, guid: f46d198d7e250594b87dd67543ef3c2d, type: 3}
+  sizzlingSound: {fileID: 8300000, guid: 247b2db4b17e99c418f986253c34bcd2, type: 3}
+  audioSource: {fileID: 8635127551197293679}
 --- !u!114 &4388935194909489160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,19 +467,7 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5147994417299288102}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -841,6 +853,11 @@ Transform:
 --- !u!137 &7543077928569398833 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 768918494017763453, guid: 294e5f4ceebec714ba4286c3749fb89c, type: 3}
+  m_PrefabInstance: {fileID: 7063291433861504588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8635127551197293679 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -7650497687676882397, guid: 294e5f4ceebec714ba4286c3749fb89c, type: 3}
   m_PrefabInstance: {fileID: 7063291433861504588}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7237495847817063134
@@ -1279,6 +1296,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afaa76bb734b1a4293d7709fa9a47bb, type: 3}
+--- !u!114 &3696438267471375279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6286078562336932209, guid: 6afaa76bb734b1a4293d7709fa9a47bb, type: 3}
+  m_PrefabInstance: {fileID: 7237495847817063134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6238395891971869062 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3667051746007278424, guid: 6afaa76bb734b1a4293d7709fa9a47bb, type: 3}
