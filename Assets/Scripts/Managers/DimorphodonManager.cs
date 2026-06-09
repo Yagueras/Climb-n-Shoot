@@ -1,28 +1,31 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
 {
     private float speed;
-    private Transform player;
+    private GameObject player;
     public AudioClip raptorSound;
     public AudioSource audioSource;
     public int scoreGiven = 10;
     public SpriteRenderer spriteRenderer;
     public Color hitColor = new Color(1f, 0.3f, 0.3f);
-    private bool IsWithinStrikingRange = false;
 
-    [field: SerializeField] public float MaxHealth { get; set; } = 100f;
+    [SerializeField] public Collider spawnTriggerCollider;
+
+    [field: SerializeField] public float MaxHealth { get; set; } = 50f;
     public float CurrentHealth { get; set; }
-    bool ITriggerCheckable.IsWithinStrikingRange { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    public bool IsWithinStrikingRange { get; set; }
+    public bool SpawnTriggerChecked { get; set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         CurrentHealth = MaxHealth;
-        speed = 3f;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        speed = 0.5f;
+        player = GameObject.FindGameObjectWithTag("Player");
         audioSource.PlayOneShot(raptorSound);
     }
 
@@ -30,22 +33,25 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
     void Update()
     {
         if (player == null) return;
-        Vector3 direction = (player.position - transform.position).normalized;
-        transform.position += (Vector3)direction * speed * Time.deltaTime;
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        transform.position += speed * Time.deltaTime * direction;
+        transform.LookAt(player.transform);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    // CAMBIO: De OnCollisionEnter a OnTriggerEnter porque el SphereCollider es un Trigger
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        // CAMBIO: Usar 'other.gameObject' en lugar de 'collision.gameObject'
+        if (other.gameObject.CompareTag("Player"))
         {
-            //logica VIDA player
-            Destroy(gameObject);
+            player.GetComponent<IDamageable>().Damage(30f);
+            //Destroy(gameObject);
         }
     }
 
-    public void Damage(int damage)
+    public void Damage(float damageAmount)
     {
-        CurrentHealth -= damage;
+        CurrentHealth -= damageAmount;
 
         StartCoroutine(FlashRed());
 
@@ -71,12 +77,12 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
 
     System.Collections.IEnumerator FlashRed()
     {
-        spriteRenderer.color = hitColor;
+        //spriteRenderer.color = hitColor;
         yield return new WaitForSeconds(0.1f);
-        spriteRenderer.color = Color.white;
+        //spriteRenderer.color = Color.white;
     }
 
-    public void Damage(float damageAmount)
+    public void EnableEnemySpawn(bool spawnTriggerChecked)
     {
         throw new System.NotImplementedException();
     }

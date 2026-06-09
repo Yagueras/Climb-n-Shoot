@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour, IDamageable, ITriggerCheckable
+public class Player : MonoBehaviour, IDamageable
 {
     [field: SerializeField] public float MaxHealth { get; set; } = 10f;
     public AudioSource audioSource;
@@ -10,7 +10,6 @@ public class Player : MonoBehaviour, IDamageable, ITriggerCheckable
     public Slider healthBar;
     public TMP_Text healthText;
     public float CurrentHealth { get; set; }
-    public bool IsWithinStrikingRange { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
     void Start()
     {
@@ -36,10 +35,5 @@ public class Player : MonoBehaviour, IDamageable, ITriggerCheckable
     public void Die()
     { 
         audioSource.PlayOneShot(defeat);    
-    }
-
-    public void SetStrikingDistance(bool isWithinStrikingRange)
-    {
-        throw new System.NotImplementedException();
     }
 }
