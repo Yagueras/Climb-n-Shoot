@@ -1,9 +1,6 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
+public class DimorphodonManager : MonoBehaviour, IDamageable
 {
     private float speed;
     private GameObject player;
@@ -13,12 +10,9 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
     public SpriteRenderer spriteRenderer;
     public Color hitColor = new Color(1f, 0.3f, 0.3f);
 
-    [SerializeField] public Collider spawnTriggerCollider;
-
     [field: SerializeField] public float MaxHealth { get; set; } = 50f;
     public float CurrentHealth { get; set; }
     public bool IsWithinStrikingRange { get; set; }
-    public bool SpawnTriggerChecked { get; set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,10 +74,5 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
         //spriteRenderer.color = hitColor;
         yield return new WaitForSeconds(0.1f);
         //spriteRenderer.color = Color.white;
-    }
-
-    public void EnableEnemySpawn(bool spawnTriggerChecked)
-    {
-        throw new System.NotImplementedException();
     }
 }

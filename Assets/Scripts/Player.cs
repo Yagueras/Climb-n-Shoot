@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UIElements;
+using UnityEngine.UI; // CAMBIADO: De UnityEngine.UIElements a UnityEngine.UI
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -14,6 +14,12 @@ public class Player : MonoBehaviour, IDamageable
     void Start()
     {
         CurrentHealth = MaxHealth;
+
+        // Es una buena práctica inicializar el texto y la barra al empezar la partida
+        if (healthText != null)
+            healthText.text = CurrentHealth + " / " + MaxHealth;
+        if (healthBar != null)
+            healthBar.value = CurrentHealth / MaxHealth;
     }
 
     void Update()
@@ -24,8 +30,18 @@ public class Player : MonoBehaviour, IDamageable
     public void Damage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
-        healthText.text = CurrentHealth + " / " + MaxHealth;
-        healthBar.value = (float)CurrentHealth / (float)MaxHealth;
+
+        // Añadimos comprobaciones de seguridad para que el juego no se rompa si olvidas asignarlos
+        if (healthText != null)
+        {
+            healthText.text = CurrentHealth + " / " + MaxHealth;
+        }
+
+        if (healthBar != null)
+        {
+            healthBar.value = (float)CurrentHealth / (float)MaxHealth;
+        }
+
         if (CurrentHealth <= 0)
         {
             Die();
@@ -33,7 +49,10 @@ public class Player : MonoBehaviour, IDamageable
     }
 
     public void Die()
-    { 
-        audioSource.PlayOneShot(defeat);    
+    {
+        if (audioSource != null && defeat != null)
+        {
+            audioSource.PlayOneShot(defeat);
+        }
     }
 }

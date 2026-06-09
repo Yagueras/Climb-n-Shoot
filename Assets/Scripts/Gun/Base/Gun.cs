@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] public float damage = 10f;
     private float minHeatCapacity = 0f;
     [SerializeField] public float maxHeatCapacity = 20f;
-    [SerializeField] public float bulletHeat = 2f;
+    [SerializeField] public float bulletHeat = 1.5f;
     private float currentGunTemperature = 0f;
     #endregion
 
