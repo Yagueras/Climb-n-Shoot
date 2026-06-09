@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1043871
 Transform:
   m_ObjectHideFlags: 0
@@ -422,6 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 24405948}
   - component: {fileID: 24405949}
+  - component: {fileID: 24405950}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -465,6 +466,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 1.15, z: 3.47}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &24405950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24405947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 1068314065}
+  - {fileID: 279399415}
 --- !u!1 &38302651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,6 +2541,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2575,6 +2595,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
   m_PrefabInstance: {fileID: 179048865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &182072094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 2113326319}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &193525304
 GameObject:
@@ -2699,6 +2724,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2835,6 +2864,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe600eb502cfa4847b7278d24cc8877c, type: 3}
+--- !u!1 &218910240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 1057302441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223857540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +2879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223857541}
   - component: {fileID: 223857542}
+  - component: {fileID: 223857543}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -2888,6 +2923,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 3, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &223857543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223857540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 182072094}
+  - {fileID: 218910240}
 --- !u!1 &226635231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,6 +3174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DimorphodonSceneReady
       objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -3184,6 +3238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271665018}
   - component: {fileID: 271665019}
+  - component: {fileID: 271665020}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -3227,6 +3282,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &271665020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271665017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 1930005547}
+--- !u!1 &279399415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 195707007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &303695227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3238,6 +3312,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3288,6 +3366,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
   m_PrefabInstance: {fileID: 303695227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &307171653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 1490160780}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &333516305
 PrefabInstance:
@@ -5361,6 +5444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrophyController
   audioSource: {fileID: 542757084}
   winSound: {fileID: 8300000, guid: b5c2f29ce3f870146bd01d3606a0173a, type: 3}
+<<<<<<< Updated upstream
 --- !u!199 &542757087
 ParticleSystemRenderer:
   serializedVersion: 7
@@ -10164,6 +10248,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+--- !u!1 &542772151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 889719217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &544938119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 1718954656}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &549472769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11216,6 +11312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DimorphodonSceneReady
       objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12245,7 +12345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &846920920
 Transform:
   m_ObjectHideFlags: 0
@@ -12279,7 +12379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &852445860
 Transform:
   m_ObjectHideFlags: 0
@@ -12624,6 +12724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DimorphodonSceneReady (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1
@@ -12865,6 +12969,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13176,7 +13284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &919691422
 Transform:
   m_ObjectHideFlags: 0
@@ -13548,6 +13656,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937670413}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &941790213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 2053576090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &990174962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 1378071808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1006072156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 663971266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1010097044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13728,6 +13851,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016867310}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1032175685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 908976083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1043503050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13806,7 +13934,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1056550205}
   - component: {fileID: 1056550204}
-  - component: {fileID: 1056550203}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -13814,18 +13941,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1056550203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056550202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51dcfabf3fd7aab469034bee5b1d68b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &1056550204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13864,6 +13979,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14094,6 +14213,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6750100827552352781, guid: 0877e01b4ace5f642b79782c67bc9781, type: 3}
   m_PrefabInstance: {fileID: 1063341719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1068314065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 303695227}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1074874186
 GameObject:
@@ -14449,6 +14573,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127027856}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1134415817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 271233307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136845603
 GameObject:
   m_ObjectHideFlags: 0
@@ -14644,7 +14773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1164455490
 Transform:
   m_ObjectHideFlags: 0
@@ -14673,6 +14802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1165002218}
   - component: {fileID: 1165002219}
+  - component: {fileID: 1165002220}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -14716,6 +14846,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1165002220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165002217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 1134415817}
 --- !u!1 &1170019396
 GameObject:
   m_ObjectHideFlags: 0
@@ -14726,6 +14870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1170019397}
   - component: {fileID: 1170019398}
+  - component: {fileID: 1170019399}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -14769,6 +14914,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 3, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1170019399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170019396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 1032175685}
 --- !u!1 &1171895010
 GameObject:
   m_ObjectHideFlags: 0
@@ -15698,7 +15857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1203793978
 Transform:
   m_ObjectHideFlags: 0
@@ -17274,6 +17433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DimorphodonSceneReady
       objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -17740,7 +17903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1485072652
 Transform:
   m_ObjectHideFlags: 0
@@ -17770,6 +17933,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18279,6 +18446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529572568}
   - component: {fileID: 1529572569}
+  - component: {fileID: 1529572570}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -18322,6 +18490,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 3, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1529572570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529572567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 941790213}
+  - {fileID: 542772151}
 --- !u!1 &1542756274
 GameObject:
   m_ObjectHideFlags: 0
@@ -18819,6 +19002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1605208326}
   - component: {fileID: 1605208327}
+  - component: {fileID: 1605208328}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -18862,6 +19046,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 2.98, z: 2.35}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1605208328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605208325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 2090098909}
 --- !u!1 &1634023788
 GameObject:
   m_ObjectHideFlags: 0
@@ -19693,6 +19891,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20697,6 +20899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DimorphodonSceneReady
       objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -21487,6 +21693,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907420032}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1930005547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 1816747280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1972123239
 GameObject:
   m_ObjectHideFlags: 0
@@ -21609,6 +21820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992850272}
   - component: {fileID: 1992850273}
+  - component: {fileID: 1992850274}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -21652,6 +21864,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1992850274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992850271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 990174962}
+  - {fileID: 1006072156}
 --- !u!1 &2001376657
 GameObject:
   m_ObjectHideFlags: 0
@@ -21884,7 +22111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2049450602
 Transform:
   m_ObjectHideFlags: 0
@@ -21913,6 +22140,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22622,6 +22853,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087251570}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2090098909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+  m_PrefabInstance: {fileID: 179048865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111949394
 GameObject:
   m_ObjectHideFlags: 0
@@ -22857,6 +23093,10 @@ PrefabInstance:
     - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_Name
       value: DimorphodonSceneReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185939972162388039, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7562184756896815869, guid: 681d22bcfd52ffe4ebb5adcf5f4cabcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23278,6 +23518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136160658}
   - component: {fileID: 2136160659}
+  - component: {fileID: 2136160660}
   m_Layer: 0
   m_Name: SpawnDetectionZone
   m_TagString: Untagged
@@ -23321,6 +23562,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 1.07, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2136160660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136160657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a925e8034f7b459b73a86699607b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnTrigger
+  enemiesToSpawn:
+  - {fileID: 544938119}
+  - {fileID: 307171653}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

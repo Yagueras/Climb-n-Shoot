@@ -13,12 +13,9 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
     public SpriteRenderer spriteRenderer;
     public Color hitColor = new Color(1f, 0.3f, 0.3f);
 
-    [SerializeField] public Collider spawnTriggerCollider;
-
     [field: SerializeField] public float MaxHealth { get; set; } = 50f;
     public float CurrentHealth { get; set; }
     public bool IsWithinStrikingRange { get; set; }
-    public bool SpawnTriggerChecked { get; set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,8 +63,8 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
         //GameManager.instance.AddScore(scoreGiven);
 
         //FindObjectOfType<EnemySpawner>().EnemyDied();
-
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 
     public void SetStrikingDistance(bool isWithinStrikingRange)
@@ -80,10 +77,5 @@ public class DimorphodonManager : MonoBehaviour, IDamageable, ITriggerCheckable
         //spriteRenderer.color = hitColor;
         yield return new WaitForSeconds(0.1f);
         //spriteRenderer.color = Color.white;
-    }
-
-    public void EnableEnemySpawn(bool spawnTriggerChecked)
-    {
-        throw new System.NotImplementedException();
     }
 }

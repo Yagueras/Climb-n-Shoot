@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
 {
     #region Gun Statistics
     [Header("Stats")]
-    [SerializeField] public float damage = 10f;
+    [SerializeField] public float damage = 20f;
     private float minHeatCapacity = 0f;
     [SerializeField] public float maxHeatCapacity = 20f;
     [SerializeField] public float bulletHeat = 2f;
